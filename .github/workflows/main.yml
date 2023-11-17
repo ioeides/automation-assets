@@ -11,8 +11,12 @@ jobs:
         run: sudo apt-get update
       - name: install inkscape
         run: sudo apt-get install -y inkscape
-      - name: delete old png folder
-        run: rm -rf ${{ github.workspace }}/buttons-png
-      - name: create new png folder
-        run: mkdir -p ${{ github.workspace }}/buttons-png
+      - name: create png folder
+        run: mkdir buttons-png
+      - name: test
+        run: touch buttons-png/test
+      - uses: actions/upload-artifact@v3
+        with:
+          name: buttons-png
+          path: buttons-png
         
