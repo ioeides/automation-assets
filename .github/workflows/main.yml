@@ -14,7 +14,7 @@ jobs:
       - name: create png folder
         run: mkdir buttons-png
       - name: test
-        run: echo hello > button-png/test.txt
+        run: echo hello > buttons-png/test.txt
       - uses: actions/upload-artifact@v3
         with:
           name: buttons-png
