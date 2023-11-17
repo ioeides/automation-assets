@@ -4,5 +4,4 @@ jobs:
   convert-svg-to-png:
     runs-on: ubuntu-latest
     steps:
-      - name: install deps
       - run: ls ${{ github.workspace }}
